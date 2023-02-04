@@ -1,0 +1,90 @@
+
+
+
+<div class="content py-4">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6">
+    <img src="assets/images/login.svg" alt="Image" class="img-fluid">
+    </div>
+    <div class="col-md-6 contents">
+    <div class="row justify-content-center">
+    <div class="col-md-8">
+    <div class="mb-4">
+    <h3>Login</h3>
+   
+    </div>
+    <form action="#" method="post">
+    <div class="form-group first">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="email">
+    </div>
+    <div class="form-group last mb-4">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="password">
+    </div>
+   
+    <div >
+        <button type="submit" class="btn btn-primary"(click)="login()">Login</button>
+
+                <a routerLink="/register"  style="text-decoration: none;cursor: pointer; " class="ml-3">Need Account ? <span class="text-danger">Register</span></a>
+
+        </div>
+    <span class="d-block text-center my-4 text-muted">&mdash; or sign in with &mdash;</span>
+    <div class="social-login">
+        <a  (click)="signInWithGoogle()" style="text-decoration: none; cursor: pointer;">
+            <div class="card shadow text-center">
+                <div class="card-body">
+                    <img src="assets/images/google.png" style="width: 30px; height:30px">Sign In With Google
+                </div>
+            </div>
+
+        </a>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <a href="#" data-target="#pwdModal" data-toggle="modal">Forgot my password</a>
+      </div>
+      
+      <!--modal-->
+      <div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h1 class="text-center">What's My Password?</h1>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                      <div class="panel panel-default">
+                          <div class="panel-body">
+                              <div class="text-center">
+                                
+                                <p>If you have forgotten your password you can reset it here.</p>
+                                  <div class="panel-body">
+                                      <fieldset>
+                                          <div class="form-group">
+                                              <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email">
+                                          </div>
+                                          <input class="btn btn-lg btn-primary btn-block" value="Send My Password" type="submit">
+                                      </fieldset>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+           
+        </div>
+        </div>
+      </div>
