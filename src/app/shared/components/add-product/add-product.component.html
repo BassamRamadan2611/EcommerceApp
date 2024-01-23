@@ -1,0 +1,16 @@
+
+<div class="card">
+    <div class="item"  routerLink="/details/{{data.id}}">
+<img src="{{data.image}}" alt="" class="img-fluid">
+<h5  style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{data.title}}</h5>
+<p style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{data.description }}</p>
+</div>
+<p style="color: blue;font-weight: bold;"><strong style="color: red;padding-right: 3px;">Price:</strong>${{data.price}}</p>
+<button class="btn btn-primary" *ngIf="!addBtn" (click)="addBtn =true">Add To Cart</button>
+
+
+<div class="d-flex w-70" *ngIf="addBtn">
+    <input type="number" class="form-control m-2" [(ngModel)]="ammount">
+    <button class="btn btn-danger m-2" (click)="add();addBtn= false ">Add</button>
+</div>
+</div>
